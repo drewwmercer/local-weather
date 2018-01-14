@@ -30,6 +30,7 @@ $(document).ready(function() {
         console.log(api);
 
         $('#city').html(city);
+        $('#weatherType').html(weatherType);
       }).catch(function(error) {
         console.log('Error caught: ' + error);
       });
