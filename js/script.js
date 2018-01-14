@@ -4,6 +4,11 @@ $(document).ready(function() {
   var fTemp;
   var cTemp;
 
+  //   Initializing the tooltips by selecting on data-toggle attribute
+  $(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
   $.getJSON('http://ip-api.com/json', function(data2) {
     lat = data2.lat;
     long = data2.lon;
