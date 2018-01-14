@@ -31,6 +31,7 @@ $(document).ready(function() {
 
         $('#city').html(city);
         $('#weatherType').html(weatherType);
+        $('#fTemp').html(fTemp);
       }).catch(function(error) {
         console.log('Error caught: ' + error);
       });
