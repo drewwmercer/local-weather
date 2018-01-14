@@ -21,13 +21,15 @@ $(document).ready(function() {
         console.log(data.coord.lon);
 
         var weatherType = data.weather[0].description;
-            var kTemp = data.main.temp;
-            fTemp = (kTemp)*(9/5)-459.67;
-            cTemp = kTemp - 273;
+        var kTemp = data.main.temp;
+        fTemp = kTemp * (9 / 5) - 459.67;
+        cTemp = kTemp - 273;
 
         var city = data.name;
         console.log(city);
         console.log(api);
+
+        $('#city').html(city);
       }).catch(function(error) {
         console.log('Error caught: ' + error);
       });
