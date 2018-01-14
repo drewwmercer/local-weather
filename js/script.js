@@ -39,7 +39,9 @@ $(document).ready(function() {
       var api2 = 'http://openweathermap.org/img/w/';
 
       $('#city').html(city);
-      $('#weatherType').html('<img src=' + api2 + showIcon + '.png' + '>' + ' ' + weatherType);
+      $('#weatherType').html(
+        '<img src=' + api2 + showIcon + '.png' + '>' + ' ' + weatherType
+      );
       $('#fTemp').html(fTemp + '&#8457;');
       $('#fTemp').click(function() {
         if (tempToggle === false) {
@@ -50,12 +52,7 @@ $(document).ready(function() {
           tempToggle = false;
         }
       });
-      $('#windSpeed').html(windSpeed + ' mph');
-
-      if (fTemp > 80) {
-        $('body').css('background-image', 'url()');
-      } else if (fTemp > 70) {
-      }
+      $('#windSpeed').html('<i class="fab fa-font-awesome-alt"></i> ' + windSpeed + ' mph');
     }).catch(function(error) {
       console.log('Error caught: ' + error);
     });
