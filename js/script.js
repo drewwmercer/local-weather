@@ -22,9 +22,11 @@ $(document).ready(function() {
 
         var weatherType = data.weather[0].description;
         var windSpeed = data.wind.speed;
+
         var kTemp = data.main.temp;
         fTemp = kTemp * (9 / 5) - 459.67;
         cTemp = kTemp - 273;
+        var tempToggle = true;
 
         var city = data.name;
         console.log(city);
@@ -33,8 +35,16 @@ $(document).ready(function() {
         $('#city').html(city);
         $('#weatherType').html(weatherType);
         $('#fTemp').html(fTemp);
+        $('#fTemp').click(function() {
+          if ((tempToggle === false)) {
+            $('#fTemp').html(cTemp);
+            tempToggle = true;
+          } else {
+            $('#fTemp').html(fTemp);
+            tempToggle = false;
+          }
+        });
         $('#windSpeed').html(windSpeed);
-
       }).catch(function(error) {
         console.log('Error caught: ' + error);
       });
