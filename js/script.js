@@ -24,8 +24,8 @@ $(document).ready(function() {
         var windSpeed = data.wind.speed;
 
         var kTemp = data.main.temp;
-        fTemp = kTemp * (9 / 5) - 459.67;
-        cTemp = kTemp - 273;
+        fTemp = (kTemp * (9 / 5) - 459.67).toFixed(2);
+        cTemp = (kTemp - 273).toFixed(2);
         var tempToggle = true;
 
         var city = data.name;
