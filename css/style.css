@@ -9,13 +9,23 @@ body:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(188, 189, 192, 0.35);
+  background: rgba(188, 189, 192, 0.2);
 }
 
 .jumbotron {
   width: 50%;
   margin: 0 auto;
   margin-top: 40px;
-  opacity: 0.9;
+  opacity: 0.9 !important;
   background: white;
+  z-index: 99;
+}
+
+.btn {
+  border: darkgray solid;
+  margin-top: 15px;
+}
+
+#weatherType {
+    margin-top: 15px;
 }
