@@ -35,8 +35,11 @@ $(document).ready(function() {
       console.log(city);
       console.log(api);
 
+      var showIcon = data.weather[0].icon;
+      var api2 = 'http://openweathermap.org/img/w/';
+
       $('#city').html(city);
-      $('#weatherType').html(weatherType);
+      $('#weatherType').html('<img src=' + api2 + showIcon + '.png' + '>' + ' ' + weatherType);
       $('#fTemp').html(fTemp + '&#8457;');
       $('#fTemp').click(function() {
         if (tempToggle === false) {
