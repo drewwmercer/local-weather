@@ -24,8 +24,8 @@ $(document).ready(function() {
         var windSpeed = data.wind.speed;
 
         var kTemp = data.main.temp;
-        fTemp = (kTemp * (9 / 5) - 459.67).toFixed(2);
-        cTemp = (kTemp - 273).toFixed(2);
+        fTemp = (kTemp * (9 / 5) - 459.67).toFixed(0);
+        cTemp = (kTemp - 273).toFixed(1);
         var tempToggle = true;
 
         var city = data.name;
@@ -34,13 +34,14 @@ $(document).ready(function() {
 
         $('#city').html(city);
         $('#weatherType').html(weatherType);
-        $('#fTemp').html(fTemp);
+        $('#fTemp').html(fTemp + '&#8457;');
         $('#fTemp').click(function() {
           if ((tempToggle === false)) {
-            $('#fTemp').html(cTemp);
+            
+            $('#fTemp').html(fTemp + '&#8457;');
             tempToggle = true;
           } else {
-            $('#fTemp').html(fTemp);
+            $('#fTemp').html(cTemp + '&#8451;');
             tempToggle = false;
           }
         });
