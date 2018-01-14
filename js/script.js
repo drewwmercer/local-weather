@@ -8,12 +8,6 @@ $(document).ready(function() {
     lat = data2.lat;
     long = data2.lon;
 
-    //   if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(function(position) {
-    //       long = position.coords.longitude;
-    //       lat = position.coords.latitude;
-    //       $('#data').html('latitude: ' + lat + '<br>longitude: ' + long);
-
     var api =
       'http://api.openweathermap.org/data/2.5/weather?lat=' +
       lat +
