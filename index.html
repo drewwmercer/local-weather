@@ -12,15 +12,17 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Using jQuery hosted by Google CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Using Font Awesome CDN for icons not sourced from openweathermap API -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 </head>
 
 <body>
     <div class='jumbotron text-center'>
         <h1 class="display-3">Local Weather</h1>
-        <p id='city'></p>
-        <button type="button" class="btn btn-secondary" id='fTemp' data-toggle="tooltip" data-placement="right" title="Click to convert"></button>
-        <p id='weatherType'></p>
-        <p id='windSpeed'></p>
+        <h2 id='city'></h2>
+        <button type="button" class="btn btn-light btn-lg" id='fTemp' data-toggle="tooltip" data-placement="right" title="Click to convert"></button>
+        <h3 id='weatherType'></h3>
+        <h3 id='windSpeed'></h3>
         <p id='data'></p>
     </div>
 
