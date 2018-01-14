@@ -1,9 +1,21 @@
 body {
-    background-image:url("https://i.ytimg.com/vi/7X2Hj02q1DY/maxresdefault.jpg");
+  background-image: url('https://i.ytimg.com/vi/7X2Hj02q1DY/maxresdefault.jpg');
+}
+
+body:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(188, 189, 192, 0.35);
 }
 
 .jumbotron {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 40px;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+  opacity: 0.9;
+  background: white;
 }
