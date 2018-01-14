@@ -52,7 +52,9 @@ $(document).ready(function() {
           tempToggle = false;
         }
       });
-      $('#windSpeed').html('<i class="fab fa-font-awesome-alt"></i> ' + windSpeed + ' mph');
+      $('#windSpeed').html(
+        '<i class="fab fa-font-awesome-alt"></i> ' + windSpeed + ' mph'
+      );
     }).catch(function(error) {
       console.log('Error caught: ' + error);
     });
