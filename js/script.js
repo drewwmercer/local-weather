@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var long;
   var lat;
+  var fTemp;
+  var cTemp;
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -17,6 +19,12 @@ $(document).ready(function() {
 
       $.getJSON(api, function(data) {
         console.log(data.coord.lon);
+
+        var weatherType = data.weather[0].description;
+            var kTemp = data.main.temp;
+            fTemp = (kTemp)*(9/5)-459.67;
+            cTemp = kTemp - 273;
+
         var city = data.name;
         console.log(city);
         console.log(api);
