@@ -21,6 +21,7 @@ $(document).ready(function() {
         console.log(data.coord.lon);
 
         var weatherType = data.weather[0].description;
+        var windSpeed = data.wind.speed;
         var kTemp = data.main.temp;
         fTemp = kTemp * (9 / 5) - 459.67;
         cTemp = kTemp - 273;
@@ -32,6 +33,8 @@ $(document).ready(function() {
         $('#city').html(city);
         $('#weatherType').html(weatherType);
         $('#fTemp').html(fTemp);
+        $('#windSpeed').html(windSpeed);
+
       }).catch(function(error) {
         console.log('Error caught: ' + error);
       });
