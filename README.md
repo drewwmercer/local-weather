@@ -1,5 +1,8 @@
 # local-weather
-"Show the Local Weather"
+"Show the Local Weather" - based on your geolocation
+
+## Check your weather
+http://www.drewwmercer.xyz/local-weather/
 
 ## Goals:
 - [x] I can see the weather in **my current location**.  
